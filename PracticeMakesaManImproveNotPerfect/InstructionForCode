@@ -22,11 +22,16 @@ defaults-package private
 ->if it is a nonstatic return/void type from subclass(same package) we can dorectly access both parent class methods and suclass methods 
 
 summary:The `default`access specifier in Java allows members to be accessed within the same class, subclasses, and classes in the same package.
+__________________________________________________________________________________________________________________________________________________________________________________________________________________
 
 2)copyConstrucrtor:-
 ************************
 
 creating one normal constructor and also one more copy constructor and passing a constructor name and obj as parameter in this copy constructor.
+->shallow copy
+->deep copy
+
+__________________________________________________________________________________________________________________________________________________________________________________________________________________
 
 3)method hiding in inheritance
 ********************************
@@ -40,6 +45,7 @@ but in upcasting if it is non static method then by upcasting also ,child method
 so making the method static in bpth parent and child class we can hide the child methods and achive method hiding
 
 how will you hide the parent method?
+__________________________________________________________________________________________________________________________________________________________________________________________________________________
 
 4)inheritance
 ********************
@@ -66,6 +72,7 @@ ex:
 	   refernce.commonsstatic();//parent is comming as static 
 	   
 	   upcastobj.commonsstatic();//parnet is comming as it is static
+__________________________________________________________________________________________________________________________________________________________________________________________________________________
 	   
 5)method overloading
 ***********************	   
@@ -75,6 +82,7 @@ it varies according to the parameters
 as it is method we can have public,protected and default methods not private if we are calling from different class
 
 as it this method it can be public,prptected,default an dprivate and static and nonstatic as well
+__________________________________________________________________________________________________________________________________________________________________________________________________________________
 
 6)method overrding
 ******************
@@ -87,6 +95,7 @@ it cannot modify the behavior of the static method in any way.22 Mar 2023
 ->Private methods can not be overridden.  
 ->A constructor can not be overridden.
 ->Use the super keyword to invoke the overridden method from the child class. 
+__________________________________________________________________________________________________________________________________________________________________________________________________________________
 
 7)construcytor 
 *****************************
@@ -109,6 +118,7 @@ Within the same class: If the constructors belong to the same class, we use" thi
 From the base class: If the constructor belongs to different classes (parent and child classes),
  we use the super keyword to call the constructor from the base class.
 ->constructor wont have return type
+__________________________________________________________________________________________________________________________________________________________________________________________________________________
 
 8)ABstract class
 *****************
@@ -120,6 +130,7 @@ absract class->abstarct key word must
 ->The subclass of abstract class in java must implement all the abstract methods "unless the subclass is also an abstract class"
 ->Abstract methods cannot have private access.it doesnot make sense bcz abstract class cant be instantiated and by instantiating child class of abstract class also 
 private method is wont be visible 
+__________________________________________________________________________________________________________________________________________________________________________________________________________________
 
 9)interface:
 ************
@@ -133,6 +144,7 @@ private method is wont be visible
 ->we can extend first and implement next same time in by one class(the class which we are extending can have public ,protected,static,non static ,
 but not privates makes sense until that class has main mehod and we are trying to implement)
 ->interface to interface extends also posible
+__________________________________________________________________________________________________________________________________________________________________________________________________________________
 
 10)Super vs super()-super class level
 **********************
@@ -146,6 +158,7 @@ ex:super.variable;  ex:super.methodname();
 ->if you have a parmeteroised or zero parmeterise construcor youbhave to call it by cpnstructor obj only 
 like ->constructorobj.methodinconstructor();(method which prints it)or using super statment in subclass
 it wont print by child obj ->calling childobj.methodinConstructor();(method which prints it)->wont work in this case of subclass
+__________________________________________________________________________________________________________________________________________________________________________________________________________________
 
 11)this vc this()-6 ways-within the class level
 ******************
@@ -167,4 +180,20 @@ must be the class type (non-primitive).
 Syntax of this that can be returned as a statement
 return_type method_name(){  
 return this;  
+__________________________________________________________________________________________________________________________________________________________________________________________________________________
+
+12)encapsulation
+*******************
+->binding data member and function members together/wrapping it together in to single unit
+->e can create a fully encapsulated class in Java by making all the data members of the class private.
+ Now we can use setter and getter methods to set and get the data in it.
+ ->by doing this we can[ achieve data hiding,control over the data,easy to test(bettr for unit testing)
+ Data Hiding and controll over the data:
+ ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+It just provides a way to protect your data from the outside world. What it means is,
+lets say if I made my instance variable public, then anyone can change its state. 
+But if we make our instance variable private/protected then actually we are restricting 
+outside entities from making changes to it.
+ ->when we give only setter method it become write only class
+ ->when we give only getter method it becomes read only
 }  
