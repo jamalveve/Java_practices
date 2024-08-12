@@ -1740,7 +1740,23 @@ By using super() keyword: It is used when we want to call the superclass constru
 Note: In the same constructor super() and this() cant be used simultaneuously
 
 
+__________________________________________________________________________________________________________________________________________________________________
+converting the object to bystream and vice versa
+Why We Use Serialization?
 
+exLmarshalling and unmarshalling
+Persistence:
+
+Serialization allows you to save the state of an object to a file or database. When you need to retrieve the object later, you can deserialize it back into its original state.
+Communication:
+
+In distributed systems or client-server applications, objects often need to be sent over a network. Serialization enables this by converting objects into a format that can be easily transmitted.
+Deep Copy:
+
+Serialization can be used to create deep copies of objects. By serializing and then deserializing an object, you create a new instance that is independent of the original.
+Caching:
+
+You can serialize objects to store them in cache for faster access in future operations, reducing the need to recreate complex objects.
 
 
 
