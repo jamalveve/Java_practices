@@ -10,7 +10,8 @@ public class VariablesAndMethodsMain {
 	 final int globalvar1=19;
 	  float variable7=4.5f;
 	  static float variable8=4.5f;
-		
+//	  final int varible10;//you cant in clas level only comnsyructoe level
+		final static int def=68;
 	
 	void nonSTaticmethod() {
 		int localvar=10;
@@ -23,6 +24,7 @@ public class VariablesAndMethodsMain {
 
 	}
 	static void sTaticmethod() {
+//		def=81+7;//not possoble//final field
 //		variable7=4.5f+variable7;//not possible //cant acces non static vafribale inside static method
 		 variable8=6+variable8;
 		final int localvar=11;//only final local var is permitted

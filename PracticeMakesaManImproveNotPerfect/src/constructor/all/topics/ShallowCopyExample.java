@@ -18,3 +18,9 @@ public class ShallowCopyExample {
 			System.out.println("my name" + name + " with in" + address + " my adress");
 		}
 }
+class ABC  
+{  
+// instance variable of the class ABC  
+int x = 30;  
+}  
+

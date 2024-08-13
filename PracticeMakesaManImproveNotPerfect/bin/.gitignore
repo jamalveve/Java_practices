@@ -1,7 +1,3 @@
-/Interface/
-/abstraction/
-/access/
-/constructor/
 /module-info.class
 /creating/
 /encapsulation/
@@ -13,3 +9,6 @@
 /pass/
 /polymorphysm/
 /thisandsuper/
+/abstraction/
+/Interface/
+/constructor/

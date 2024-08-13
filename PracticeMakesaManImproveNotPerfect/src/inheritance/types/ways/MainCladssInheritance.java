@@ -37,14 +37,13 @@ public class MainCladssInheritance {
 	   
 	   //if we do upcast fro parent obj
 	   MainCladssInheritance refernce=childobj; 
-	   refernce.commons();//as we are passingv the child reference and it is non child is visible
+	   refernce.commons();//as we are passingv the child reference and it is non static child is visible
+	   refernce.commonsstatic();//not recommended
 	   
 	   MainCladssInheritance upcastobj=new SingleInheritanceExample(); 
 	   upcastobj.commons();//as it is non static method child is visible
 	   
 //	   SingleInheritanceExample childobj1=parentobj;//not possible
-	   
-	   refernce.commonsstatic();//parent is comming as static 
 	   
 	   upcastobj.commonsstatic();//parnet is comming as it is static
 	   

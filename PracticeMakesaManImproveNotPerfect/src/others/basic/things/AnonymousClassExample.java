@@ -34,6 +34,8 @@ public class AnonymousClassExample {
 		Person.play();
 		personobj.study("Java");
 //		personobj.
+		
+//		AnonymousInterfaceExample interfaceobj = new AnonymousInterfaceExample() ;//not possible
 
 		AnonymousInterfaceExample interfaceobj = new AnonymousInterfaceExample() {
 			@Override

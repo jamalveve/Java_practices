@@ -7,13 +7,39 @@ public abstract class AbstractClassExample {
 	// declard as abstract
 	final String names = "maruthi";
 	private final String kind;// only in consyructor declaration is possible
-
+	 final int abc;//eother init/declare inside construtor
+	private final int def=35;
+	static int statvar;
 	AbstractClassExample(String kind) {
+//		this("king",56);Y not possible
+		abc=59;//we can initialoize final varible  only in constructor 
+//		def=def+78+abc;//not possible
 		this.kind = kind;
 		System.out.println(kind);
+		System.out.println(abc);
 
 	}
+	AbstractClassExample(String kind,int statvar) {
+//		this("jamal");
+		abc=78;
+		this.statvar=statvar;
+		this.kind = kind;
+		System.out.println(kind);
+		System.out.println(abc);
+		System.out.println(statvar);
 
+	}
+     AbstractClassExample(String kind,int statvar,int abc) {
+		
+		this.statvar=statvar;
+		this.kind = kind;
+		this.abc=abc;
+		System.out.println(kind);
+		System.out.println(abc);
+	 System.out.println(statvar);
+
+	}
+	
 	abstract void engine();
 
 	abstract int tire();
@@ -22,9 +48,16 @@ public abstract class AbstractClassExample {
 
 	public static void method3() {//public /protectred/default methods
 		System.out.println("I a, default method in abstract class");
+		int abc=67;
+		int def=78+abc;
+		System.out.println(abc);
+		System.out.println(def);
 
 	}
-
+	
+  void nonstaticmethod() {
+	System.out.println("i am from abstract nonstatuc method");
+}
 	final void finalmethod4() {
 		System.out.println("I am final method in abstract class");
 	}// you cant overide
@@ -37,7 +70,7 @@ public abstract class AbstractClassExample {
 class Carss extends AbstractClassExample {
 
 	Carss(String name, int some) {
-		super("kindhearted");// super statemnt in constructor first line
+		super("kindhearted",56,35);// super statemnt in constructor first line
 
 		System.out.println(name + some);
 	}

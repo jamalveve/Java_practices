@@ -10,11 +10,11 @@ public class MainClass {
 		Mug.spill(myMug); // myMug now contains "nothing"
 		System.out.println(myMug.getContents());
 System.out.println("============================================================");
-		String content = "juice";
-		System.out.println(content);
-
-		Jug.spilled(content); // myMug now contains "nothing"
-		System.out.println(content);
+//		String localcontent = "juice";
+//		System.out.println(localcontent);
+//
+//		Jug.spilled(localcontent); // myMug now contains "nothing"
+//		System.out.println(localcontent);
 		System.out.println("============================================================");
 
 
@@ -32,9 +32,12 @@ System.out.println("============================================================
 		System.out.println("`blue` color value = " + blue.getColor());
 
 	}
+	
+//	Object o1 = new Balloon("Blue"); 
+//	Object o2 = new Balloon("Red");
 
 	// Generic swap method//just reference so wont create any object so o1//memory
-	// refrence =50 only 02=memory referemnce=100 only
+	// refrence =50 =memory referemnce=100 only
 	public static void swap(Object o1, Object o2) {
 		Object temp = o1;
 		o1 = o2;

@@ -14,7 +14,7 @@ public interface InterfaceExample {
 //
 //System.out.println("helllos");
 //	}-y not allowed?
-//	all above are permitted
+//	
 //	protected void abstractMethod2();{
 
 	// Illegal modifier for the interface method abstractMethod2;

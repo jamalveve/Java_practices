@@ -9,12 +9,11 @@ public class DeepCopyExample {
 	        this.addresses = addresses;
 	    }
 
-	    // Shallow copy constructor is same as copy constructor
 	    public DeepCopyExample(DeepCopyExample other) {
 	        this.names = other.names;
 	        this.addresses = other.addresses; // Copying the reference (shallow copy)
 	    }
-	    public void display() {
+	    public void displaydeep() {
 			System.out.println("my name" + names + " with in" + addresses + " my adress");
 		}
 }
