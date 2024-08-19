@@ -28,7 +28,7 @@ defaults-package private
 summary:The `default`access specifier in Java allows members to be accessed within the same class, subclasses, and classes in the same package.
 __________________________________________________________________________________________________________________________________________________________________________________________________________________
 
-2)copyConstrucrtor:-
+2)copyConstrucrtor:-check about this
 ************************
 
 creating one normal constructor and also one more copy constructor and passing a constructor name and obj as parameter in this copy constructor.
