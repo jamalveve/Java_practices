@@ -16,9 +16,9 @@ public class AnonymousClassExample {
 				System.out.println("person from mainclass  is eating");
 			}
 
-			static void play() {
-				System.out.println("person from mainclass  is eating");
-			}
+//			static void play() {
+//				System.out.println("person from mainclass  is eating");
+//			}
 
 			void study(String study) {
 				System.out.println("person from mainclass is studying" + study);

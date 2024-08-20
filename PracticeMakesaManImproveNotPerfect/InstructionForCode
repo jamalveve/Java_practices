@@ -212,4 +212,52 @@ outside entities from making changes to it.
  ->when we give only getter method it becomes read only
 }  
 __________________________________________________________________________________________________
+COMPARATOR and COMPARABLE:
+############################
+Comparator(I)
+*************
+           ->comparator is like if you want to specify on which logic you want to sort elements  ( custom sorting )+
+           ->we have compare method in this interface
+Collection wise:
+^^^^^^^^^^^^^^^^^
+ 
+if it accept Collections.sort->Collections.sort(collectionclass,Comparator);
+if not->covert that collection to the collection which accepts Collections.sort and implemet that same
+
+Class Wise
+*********** 
+you can use comparator to specify your ownlogic 
+Ex:
+System.out.println("printing after sorting");
+		Comparator<Person> CustomComparator=new Comparator<Person>() {
+
+			@Override
+			public int compare(Person o1, Person o2) {
+				if(o1.age>o2.age) {
+					return 1;
+				}else {
+					return -1;
+				}
+			}
+			
+		};
+		Collections.sort(personList,CustomComparator);
+		
+Comparable(I)
+*************
+         ->if you want to give a power to class itself to compare the object
+         ->you can implement Comparable and overide the compareTo method and write the logic
+         
+Collection wise:
+^^^^^^^^^^^^^^^^^
+as String class and Integer class implemnts this comparable interface no  need to use this in collection you can directly use 
+Collection.sort();
+
+Class Wise
+*********** 
+ if you want to give a power to class itself to compare the object
+  you can implement Comparable and overide the compareTo method and write the logic
+ 
+
+__________________________________________________________________________________________________
 pass by value and reference-doubt
