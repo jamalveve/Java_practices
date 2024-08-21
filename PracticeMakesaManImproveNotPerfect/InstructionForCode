@@ -2,28 +2,28 @@
 ********************
 Public
 *******
- ->if it is static return /void type from same class/differentclass/class from diffrent package we can directly access through className.methodname();
- ->if it is nonstatic return/void type from same class/ different class/different class from other package we can create am obj for that particular class
-->if it is a static return /void type from subclass (same paclage/diff package) we can access through classname.methodname
-->if it is a nonstatic return/void type from subclass(same package/differe packlage) we can dorectly access both parent class methods and suclass methods 
+ ->if it is static return void type from same classdifferentclassclass from diffrent package we can directly access through className.methodname();
+ ->if it is nonstatic returnvoid type from same class different classdifferent class from other package we can create am obj for that particular class
+->if it is a static return void type from subclass (same paclagediff package) we can access through classname.methodname
+->if it is a nonstatic returnvoid type from subclass(same packagediffere packlage) we can dorectly access both parent class methods and suclass methods 
 using child class object only.
 
 summary:The `public` modifier allows elements to be accessible from any other class in the application, regardless of the package. 
 
 protected-doubt
 **********
- ->if it is static return /void type from same class/differentclass/we can directly access through className.methodname();
- ->if it is nonstatic return/void type from same class/ different class/ we can create am obj for that particular class
-->if it is a static return /void type from subclass (same paclage/diff package) we can access through classname.methodname
-->if it is a nonstatic return/void type from subclass(same package/differe packlage) we can dorectly access both parent class methods and suclass methods 
+ ->if it is static return void type from same classdifferentclasswe can directly access through className.methodname();
+ ->if it is nonstatic returnvoid type from same class different class we can create am obj for that particular class
+->if it is a static return void type from subclass (same paclagediff package) we can access through classname.methodname
+->if it is a nonstatic returnvoid type from subclass(same packagediffere packlage) we can dorectly access both parent class methods and suclass methods 
 summary:The protected access specifier in Java allows members to be accessed within the same class, subclasses, and classes in the same package.
 
 defaults-package private
 ***********
-->if it is static return /void type from same class/differentclass we can directly access through className.methodname();
- ->if it is nonstatic return/void type from same class/ different class we can create am obj for that particular class
-->if it is a static return /void type from subclass (same package) we can access through classname.methodname
-->if it is a nonstatic return/void type from subclass(same package) we can dorectly access both parent class methods and suclass methods 
+->if it is static return void type from same classdifferentclass we can directly access through className.methodname();
+ ->if it is nonstatic returnvoid type from same class different class we can create am obj for that particular class
+->if it is a static return void type from subclass (same package) we can access through classname.methodname
+->if it is a nonstatic returnvoid type from subclass(same package) we can dorectly access both parent class methods and suclass methods 
 
 summary:The `default`access specifier in Java allows members to be accessed within the same class, subclasses, and classes in the same package.
 __________________________________________________________________________________________________________________________________________________________________________________________________________________
@@ -35,7 +35,7 @@ creating one normal constructor and also one more copy constructor and passing a
 ->shallow copy
 ->deep copy
 
-constrcutor leve -doubt
+constrcutor level -doubt 
 
 __________________________________________________________________________________________________________________________________________________________________________________________________________________
 
@@ -59,27 +59,42 @@ ________________________________________________________________________________
 through parent obj-> only parent methods are visible
 through child all methods are visible
 if we create a reference and pass child obj reference
+->basically  by child class all the method from parent is visible but making it static: achieving metong method hiding
+metpod hiding:->
+printing childobj.staticmethod is printing child static so hiding parent
 
-if we upcast to child,depends on the static/no static explained above we can get the child or parent methods visible
+
+if we upcast to child,depends on the staticno static explained above we can get the child or parent methods visible
+
+->basically Upcasting only allow acces to parent method unlesss we override non static,anyways static cant be overided thats why
 static->parent method is visible
 non static->child method is visible
-
 ex:
 
-   //passing the child referencde created as object(also upcasting only)
+   passing the child referencde created as object(also upcasting only)
 	   MainCladssInheritance refernce=childobj; 
-	   refernce.commons();//as it is non static child is visible
-    refernce.commonsstatic();//parent is comming as static 
+	   refernce.commons();as it is non static child is visible
+    refernce.commonsstatic();parent is comming as static 
 	   
-   //upcasting
+   upcasting
    
 	   MainCladssInheritance upcastobj=new SingleInheritanceExample(); 
-	   upcastobj.commons();//as it is non static method child is visible
+	   upcastobj.commons();as it is non static method child is visible
 	   
-//	   SingleInheritanceExample childobj1=parentobj;//not possible
+	   SingleInheritanceExample childobj1=parentobj;not possible
 	   
 	  
-	   upcastobj.commonsstatic();//parnet is comming as it is static
+	   upcastobj.commonsstatic();parnet is comming as it is static
+	   
+Summary:
+->f you call parent parentobj=new parent()->only pareny method is visible
+->if ypu call child childobj=new Child()->all parent method and child are visble ,
+in the above case if you want to hide the parent method create the same method in child and make both static
+now child method is visible and child will hide the parent method
+
+->when ypu do upcast,Parent parentref=new Child();->upcasting will give only pareny method 
+but this time if it is non static overided method child will be visible 
+and if it is static overided method parent only visible (hides the child method)
 __________________________________________________________________________________________________________________________________________________________________________________________________________________
 	   
 5)method overloading
@@ -161,10 +176,10 @@ ________________________________________________________________________________
 
 10)Super vs super()-super class level
 **********************
-->super is a  or keyword which can be used to call a super class varaibles and methods fro child class/constructor
+->super is a  or keyword which can be used to call a super class varaibles and methods fro child classconstructor
 ex:super.variable;  ex:super.methodname();
 
-->super() is a statement/constrcutor call we can call the super constructor from the child condtructor
+->super() is a statementconstrcutor call we can call the super constructor from the child condtructor
 ->this should be in the firts line of the child constructor 
 ->not in method level
 ->we can call any methods and varibles except private (it doessnot make sense from subsclass)
@@ -181,7 +196,7 @@ Constructorlevel-3 ways
 ->If local variables(formal arguments) and instance variables are completely different, 
 there is no need to use this keyword.
 ->to invoke current class constructor->costructor call from another constryctor shuld be om the forst line of the constructor
-->//recursive constructor invocation is not possible
+->recursive constructor invocation is not possible
 We can pass the "this" keyword in the constructor also.
  It is useful if we have to use one object in multiple classes.
 
@@ -198,7 +213,7 @@ ________________________________________________________________________________
 
 12)encapsulation->
 *******************
-->binding data member and function members together/wrapping it together in to single unit
+->binding data member and function members togetherwrapping it together in to single unit
 ->e can create a fully encapsulated class in Java by making all the data members of the class private.
  Now we can use setter and getter methods to set and get the data in it.
  ->by doing this we can[ achieve data hiding,control over the data,easy to test(bettr for unit testing)
@@ -206,13 +221,13 @@ ________________________________________________________________________________
  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 It just provides a way to protect your data from the outside world. What it means is,
 lets say if I made my instance variable public, then anyone can change its state. 
-But if we make our instance variable private/protected then actually we are restricting 
+But if we make our instance variable privateprotected then actually we are restricting 
 outside entities from making changes to it.
  ->when we give only setter method it become write only class
  ->when we give only getter method it becomes read only
 }  
 __________________________________________________________________________________________________
-COMPARATOR and COMPARABLE:
+13COMPARATOR and COMPARABLE:
 ############################
 Comparator(I)
 *************
@@ -259,5 +274,25 @@ Class Wise
   you can implement Comparable and overide the compareTo method and write the logic
  
 
+__________________________________________________________________________________________________
+
+14)Type casting 
+upcasting->converting the value from smaller to larger
+downcasting->coverting the value from smaller to larger
+
+    upcasting->lowyer to higher->automatic prpcess
+	 Ex:
+	int-->long
+	float-->double
+	
+	downcasting->higher to lowyer-manual process
+	 Ex:
+	long--.>int
+	double--->float
+	
+__________________________________________________________________________________________________
+
+How to achieve method hiding in Java?
+Method hiding may happen in any hierarchy structure in java. When a child class defines a static method with the same signature as a static method in the parent class, then the child's method hides the one in the parent class.17 Mar 2024
 __________________________________________________________________________________________________
 pass by value and reference-doubt

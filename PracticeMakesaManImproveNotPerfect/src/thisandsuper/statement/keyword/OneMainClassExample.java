@@ -119,7 +119,7 @@ class Libaries {
 	static void newsPpers() {
 		System.out.println("newspapers are threre in libary");
 	}
-
+    
 }
 //class ConstructorExample extends OneMainClassExample{
 //	ConstructorExample(){

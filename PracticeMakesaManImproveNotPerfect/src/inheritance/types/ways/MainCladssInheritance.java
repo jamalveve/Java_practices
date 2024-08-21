@@ -22,7 +22,7 @@ public class MainCladssInheritance {
 	   
 	   MainCladssInheritance parentobj=new MainCladssInheritance();
 	   
-	   //basicall we cantvget the child property to parent property but
+	   //basicall we cant get the child property to parent property
 	   parentobj.vechicles();
 	   parentobj.animals();
 	   
@@ -33,19 +33,28 @@ public class MainCladssInheritance {
 	   childobj.Bus();
 	   childobj.vechicles();
 	   
+	   System.out.println("check casting");
 	   childobj.commons();
 	   
+	   System.out.println("printing childobj.staticmethod is printing child static");
+	   childobj.commonsstatic();//we can hide the parent by making it static method
+	   
+	   
+	    //basically doing upcasting we wil bget the parent methods and variables only unlesss we overide
 	   //if we do upcast fro parent obj
 	   MainCladssInheritance refernce=childobj; 
 	   refernce.commons();//as we are passingv the child reference and it is non static child is visible
-	   refernce.commonsstatic();//not recommended
+	   refernce.commonsstatic();//parent only
 	   
 	   MainCladssInheritance upcastobj=new SingleInheritanceExample(); 
-	   upcastobj.commons();//as it is non static method child is visible
-	   
+	   //the method bus and bffalo is not visible
+	   System.out.println("checking casting");
+	   upcastobj.commons();//as it is non static overrided method child is visible
+	   parentobj.commonsstatic();//caalimg parent obj. method parent is visbile
 //	   SingleInheritanceExample childobj1=parentobj;//not possible
-	   
-	   upcastobj.commonsstatic();//parnet is comming as it is static
+	   //making it static parent is visible and child is hiding
+	   System.out.println("upcasting and calling static method print parent");
+	   upcastobj.commonsstatic();//as it is static overoded mthod,parnet is comming 
 	   
 	   System.out.println("--------------------------------------------------------------------");
 	   //multilevel inheritance
