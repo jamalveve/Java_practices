@@ -116,14 +116,38 @@ public class MainclasssForconstructor {
 		upcastobj.checkmethod();// parent onlyb visible asit is static
 
 		// constructor chaining in class level using this
+		System.out.println("============const chaining child andsame class level=============");
 		ConstructorChainingExample constchainobj = new ConstructorChainingExample();
+		ConstructorChainingExample constchainobj1 = new ConstructorChainingExample("jamal",89);
+		ConstructorChainingExample constchainobj2 = new ConstructorChainingExample("jam",78,6.7);
+		ConstructorChainingExample constchainobj3 = new ConstructorChainingExample(45.7);
+
 		// constructor chaining in superclass level using super
+		System.out.println("============const chaining super andsame class level=============");
+
 		System.out.println("---------------------------------------------------");
 		SuperConstructorChaining superconstobj = new SuperConstructorChaining();
+	//as it is private below line not possible
+//		SuperConstructorChaining superconstobj1= new SuperConstructorChaining("jamal",89);
+
+		SuperConstructorChaining superconstobj2 = new SuperConstructorChaining("jam",78,6.7);
+		SuperConstructorChaining superconstobj3 = new SuperConstructorChaining(6.7);
+
+		System.out.println("============constructor chaining child access check=============");
+
 //		constchainobj.SuperConstructorChaining();//mnot possible
 
 		// the above call will will not start from single param it start the constructor
 		// from firts only
+		
+		System.out.println(constchainobj.superconstvar1);//possible
+		
+//		constructor of sub class is invoked when we create the object of subclass, 
+		ConstructorChainingExample constchainobjchild = new ConstructorChainingExample();
+
+		//, In Java, constructor of base class with no argument gets automatically called in derived class constructor.
+//		it by default invokes the default constructor of super class.
+
 
 	}
 

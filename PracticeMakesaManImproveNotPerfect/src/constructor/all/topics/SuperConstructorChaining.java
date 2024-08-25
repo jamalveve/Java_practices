@@ -9,7 +9,7 @@ public class SuperConstructorChaining {
 		this("jamal",14);
 		System.out.println("zero param cons from super constructor");
 	}
-	public SuperConstructorChaining(String superconstvar2,int superconstvar1) {
+	private SuperConstructorChaining(String superconstvar2,int superconstvar1) {
 		this("jamal",14,8.9);
 		this. superconstvar1= superconstvar1;
 		this. superconstvar2= superconstvar2;

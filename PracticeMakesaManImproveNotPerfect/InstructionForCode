@@ -95,6 +95,23 @@ now child method is visible and child will hide the parent method
 ->when ypu do upcast,Parent parentref=new Child();->upcasting will give only pareny method 
 but this time if it is non static overided method child will be visible 
 and if it is static overided method parent only visible (hides the child method)
+
+summary for code:overriding inheritance
+#)scenario 1
+parentclass parentobj=new Parentclass()
+Parentobj.instancemethod->Instance method in Parent class.
+Parentobj.staticmethod-> Static method in Parent class.
+
+Childclass childobj=new childclass()
+
+childobj.instancemethod->Instance method in Child class.
+childobj.staticemethod->->Static method in child class.(method hiding)
+childobj.notoveridedStaticmethod->static methid in 
+
+ParenClass ref=new Childclass();
+
+ref.instancemethod->Instance method in Child class.
+ref.staticmethod  ->Static method in Parent class.
 __________________________________________________________________________________________________________________________________________________________________________________________________________________
 	   
 5)method overloading

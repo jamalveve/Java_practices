@@ -1759,7 +1759,20 @@ Caching:
 You can serialize objects to store them in cache for faster access in future operations, reducing the need to recreate complex objects.
 
 
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+String Builder/String BUffer
+*******************************
+
+to store  a string 4 ways
+'1)String s="welcme";
+String s=new String("welcome");
+
+StrungBuffer strbyff=new StringBuffer("welcme");
+StrungBuilder strbilfff=new StringBuilder("welcome");
+
+string immutable-->
+string buffer and string builder is mutable
 
 
 
