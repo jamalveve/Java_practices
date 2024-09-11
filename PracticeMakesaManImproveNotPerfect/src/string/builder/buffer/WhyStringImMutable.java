@@ -22,9 +22,11 @@ public class WhyStringImMutable {
 		// lets come to string
 
 		String s2 = "welcome";
+//		s2.concat("to my home");	///--->this  is y string is immutable	
 		String Concatstr = s2.concat("to my home");
-		System.out.println(s2);//--->this  is y string is immutable
 		// it wont change until you store it in someother string and you have to pringt
+
+		System.out.println(s2);
 		System.out.println(Concatstr);
 //		string womt let the actuall varoale mutable 
 
